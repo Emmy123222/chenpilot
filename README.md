@@ -96,7 +96,7 @@ pnpm exec lint-staged
 #### commit-msg hook
 
 ```sh
-pnpm exec commitlint --edit "$1"
+pnpm exec commitlint --edit $1
 ```
 
 #### lint-staged configuration
