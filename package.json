@@ -15,11 +15,13 @@
     "migration:show": "npm run typeorm migration:show -- -d src/config/Datasource.ts",
     "migration:generate": "npm run typeorm migration:generate -- -d src/config/Datasource.ts -p src/migrations/",
     "build": "tsc",
+    "lint": "eslint --fix",
+    "format": "prettier --write",
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,js}": "eslint --fix",
-    "*.{ts,js,json,md}": "prettier --write"
+    "*.{ts,js}": "pnpm lint",
+    "*.{ts,js,json,md}": "pnpm format"
   },
   "keywords": [],
   "author": "",
